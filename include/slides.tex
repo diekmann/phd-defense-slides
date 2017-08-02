@@ -1,0 +1,115 @@
+\usepackage[utf8]{inputenc}
+\usepackage{packages}
+\usepackage{beamermods}
+
+%do not load enumitem with beamer
+
+
+%stand alone entries for my own pubs
+%http://stefaanlippens.net/bibentry/
+%\usepackage{natbib}
+\usepackage{bibentry}
+\nobibliography*
+
+% For beamer mode (default):
+\author[C.\ Diekmann]{Cornelius Diekmann, M.\,Sc.}
+\title[Provably Secure Networks: Methodology and Toolset for Configuration Management]{Provably Secure Networks:\\Methodology and Toolset for Configuration Management}
+\date{July 27, 2017}
+
+\usepackage{pgfpages}
+\usepackage{ifthen}
+
+
+%\setbeameroption{show notes on second screen=right}
+
+
+\newcommand{\hairspace}{\hspace{1pt}}
+\newcommand{\eg}{\mbox{e.\hairspace{}g.,} }  % z.B.
+\newcommand{\ie}{\mbox{i.\hairspace{}e.,} }  % d.h.
+\newcommand{\Ie}{\mbox{I.\hairspace{}e.,} }  % d.h.
+\newcommand{\cf}{\mbox{cf.}\ }
+\newcommand{\etal}{\mbox{et~al.}\ }
+
+\usepackage{fancyvrb}
+
+\usepackage{IEEEtrantools}
+
+%https://tex.stackexchange.com/questions/220820/itemize-list-inside-a-tikzpicture-node
+\usepackage{varwidth}
+
+% math typesetting
+% free variables
+\newcommand{\mvar}[1]{\ensuremath{\mathit{#1}}}
+% definitions and constants
+\newcommand{\mdef}[1]{\ensuremath{\mathsf{#1}}}
+% executable functions
+\newcommand{\mfun}[1]{\mdef{#1}}
+%datatype constructor (may appear in text)
+\newcommand\mconstr[1]{\mdef{#1}}
+%math control (if then else)
+\newcommand\mctrl[1]{\ensuremath{\mathbf{#1}}}
+
+
+\newcommand{\topos}{\emph{topoS}}
+\newcommand{\fffuu}{\emph{{f}{f}{f}uu}}
+
+\newcommand\iptables{{iptables}}
+
+
+\newcommand{\BigO}{\mathcal{O}}
+
+
+\DeclareMathSymbol{\mlq}{\mathord}{operators}{``}
+\DeclareMathSymbol{\mrq}{\mathord}{operators}{`'}
+
+
+\newcommand\mdoubleplus{\ensuremath{\mathbin{+\mkern-10mu+}}}
+\newcommand\lstapp{\ensuremath{\mathbin{:\mkern-1mu:\mkern-1mu:}}} %list append
+\newcommand\lstcons{\ensuremath{\mathbin{:\mkern-1mu:}}} %list append
+
+\newcommand{\free}[1]{\textcolor{TUMDarkerBlue}{#1}}
+\newcommand{\bound}[1]{\textcolor{TUMDarkGreen}{#1}}
+\newcommand{\boundi}[1]{\textcolor{TUMGreen}{#1}}
+
+
+\newcommand*\circled[1]{\tikz[baseline=-3pt, scale=0.5, every node/.style={scale=0.5}]{\node[shape=circle,draw,inner sep=1pt,minimum size=16pt] (char) {#1};}}
+
+\newcommand\allow{\ensuremath{\textnormal{\circled{\large \textbf{\checkmark}}}}}
+\newcommand\deny{\ensuremath{\textnormal{\circled{\large \textbf{\texttimes}}}}}
+\newcommand\undecided{\ensuremath{\textnormal{\circled{\textnormal{\large \textbf{?}}}}}}
+
+\newcommand\matchop[1]{\ensuremath{\mfun{match}\ {#1}}}
+\newcommand\matches[1]{\ensuremath{\matchop\gamma \ #1 \ p}}
+\newcommand\nmatches[1]{\ensuremath{\neg\; \matchop\gamma \ #1 \ p}}
+\newcommand\bigstep[3]{\ensuremath{\free{\Gamma},\free{\gamma},\free{p} \vdash\big\langle #1,\; #2 \big\rangle \Rightarrow #3}}
+
+%https://tex.stackexchange.com/questions/85284/pointing-an-arrow-to-a-tabular-node-in-beamer-is-buggy-ignorenonframetext
+\tikzset{every picture/.style={remember picture}}
+
+
+
+%http://tex.stackexchange.com/questions/84143/fancy-arrows-with-tikz
+\tikzset{MyDoubleArrow/.style={double arrow, draw=black, anchor=west, align=center, text width=2em}}
+\tikzset{MySingleArrow/.style={single arrow, draw=black, anchor=west, align=center, text width=2em}}
+\tikzset{MySingleLeftArrow/.style={single arrow, rotate=180, draw=black, anchor=east, align=center, text width=2em}}
+
+\tikzset{MyRoundedBox/.style={
+		draw,
+		rounded corners=3pt,
+		inner sep=3pt,
+		anchor=west,
+		text width=11em,
+		%minimum height=8ex,
+		align=center,
+		fill=TUMYellow,
+	}
+}
+
+
+\usetikzlibrary{arrows.meta} %requires pgf > 3.0.
+
+\tikzset{myptr/.style={-{Latex[scale=1.5]}}}%
+\tikzset{myptrdouble/.style={{Latex[scale=1.5]}-{Latex[scale=1.5]}}}%
+\tikzset{myptrdotted/.style={myptr,dashed}}%
+
+\newcommand{\blitzbam}{\includegraphics[height=4em]{pics/blitz.pdf}}
