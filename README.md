@@ -1,5 +1,5 @@
 # phd-defense-slides
-Just slides.
+Just slides [[pdf on github]](https://github.com/diekmann/phd-defense-slides/blob/master/slides.pdf)
 
 # Thesis
 * Cornelius Diekmann, *Provably Secure Networks: Methodology and Toolset for Configuration Management,* PhD thesis, Technische Universität München, Jul. 2017. [[Url]](https://mediatum.ub.tum.de/?id=1350756) [[arXiv]](https://arxiv.org/abs/1708.08228) [[DOI]](http://dx.doi.org/10.2313/NET-2017-07-2)
